@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator (m-5)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+</head>
+<body>
+    <!-- For generating -->
+    <form id="resumeBox">
+        <h2 id="heading">Resume Generator</h2>
+        <div class="generating">
+            <label for="userName">UserName:</label>
+            <input type="text" name="userName" placeholder="Enter your name" id="userName" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" id="email" required>
+            <br>
+
+            <label for="phoneNo">Phone no:</label>
+            <input type="number" name="number" placeholder="Enter your number" id="phoneNo" required>
+            <br>
+
+            <label for="region">Region:</label>
+            <input type="text" name="region" placeholder="Enter your region" id="region" required>
+            <br>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="2" placeholder="Enter your skills" required></textarea>
+            <br>
+
+            <label for="education">Highest Education:</label>
+            <input type="text" name="text" id="education" placeholder="Enter your education">
+            <br>
+
+            <label for="education2">Current Education:</label>
+            <input type="text" name="text" id="education2" placeholder="Enter your education">
+            <br>
+        </div>
+        <button type="submit" id="button">Generate Resume</button>
+    </form>
+
+    <!-- Output from user -->
+    <div id="generated" class="hidden">
+        <h2 id="h2output">Generated Resume</h2>
+        <div class="output"><strong>UserName:</strong> <span id="getName"></span></div>
+        <div class="output"><strong>Email:</strong> <span id="getmail"></span></div>
+        <div class="output"><strong>Phone no:</strong> <span id="getNumber"></span></div>
+        <div class="output"><strong>Region:</strong> <span id="getRegion"></span></div>
+        <div class="output"><strong>Skills:</strong> <span id="getskills"></span></div>
+        <div class="output"><strong>Higher Education:</strong> <span id="getEdu"></span></div>
+        <div class="output"><strong>Current Education:</strong> <span id="getEdu2"></span></div>
+        <div id="shareAbleLink" > 
+            <h2>ShareAble Link:</h2>
+        </div>
+        <div class="resume">
+        <button id="editResume" >Edit Resume</button></div>
+        <button id ="downloadAsPdf">Download as pdf </button>
+       
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
+
